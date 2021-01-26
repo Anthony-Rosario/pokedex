@@ -6,7 +6,6 @@ const pokeStats = getPokeStats();
 
 for (const item of pokeStats) {
     caughtResults(item);
-    // seenResults(item);
 }
 
 const resetButton = document.getElementById('reset-button');
