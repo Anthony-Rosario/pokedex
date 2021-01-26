@@ -1,4 +1,5 @@
 const POKESTATS = 'POKESTATS';
+import pokemon from './data.js';
 import { findByUnderscoreId } from './utils.js';
 
 
@@ -39,8 +40,10 @@ export function incrementViewed(_id) {
     const pokeId = findByUnderscoreId(_id, stats);
 
     if (!pokeId) {
+        const pokemonData = findByUnderscoreId(_id, pokemon);
         
         const newStat = {
+            name: pokemonData.pokebase,
             _id: _id,
             seen: 1,
             caught: 0
