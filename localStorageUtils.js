@@ -28,6 +28,10 @@ export function setPokeStats(newStats) {
 }
 
 
+export function clearPokeStats(){
+    localStorage.setItem(POKESTATS, '[]');
+}
+
 
 export function incrementViewed(_id) {
     const stats = getPokeStats();
