@@ -42,14 +42,14 @@ var myChart = new Chart(ctx, { // eslint-disable-line
             {
                 label: '# of times seen',
                 data: makeSeenArray(pokeStats), // DATA ARRAY GOES HERE
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                backgroundColor: 'rgba(255, 99, 132)',
                 borderColor: 'black',
                 borderWidth: 2
             },
             {
                 label: '# of times caught',
                 data: makeCaughtArray(pokeStats), // DATA ARRAY GOES HERE
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                backgroundColor: 'black',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 2
             },

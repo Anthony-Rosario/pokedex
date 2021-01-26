@@ -2,3 +2,52 @@
     width: 75px;
     height: 75px;
 }
+
+body {
+    background-color: rgb(69, 73, 69);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+label {
+    font-family: 'pokemon_solidnormal';
+    justify-content: center;
+    align-content: center;
+}
+
+
+h1 {
+    color:rgb(43, 0, 100);
+}
+
+table.redTable {
+    border: 5px solid #A40808;
+    background-color: #ffffff;
+    width: 400px;
+    text-align: center;
+    border-collapse: collapse;
+    color: rgb(43, 0, 100);
+  }
+
+
+  table.redTable td, table.redTable th {
+    border: 1px solid #424040;
+    padding: 3px 2px;
+  }
+
+
+  table.redTable tbody td {
+    font-size: 13px;
+  }
+
+
+@font-face {
+    font-family: 'pokemon_solidnormal';
+    src: url('../assets/pokemon_solid-webfont.woff2') format('woff2'),
+         url('../assets/pokemon_solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
