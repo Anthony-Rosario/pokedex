@@ -71,17 +71,16 @@ export function renderPokeImg(pokemonItem) {
 
 let rounds = 0;
 
-// export function roundsPlayed() {
-//     rounds = rounds + 1;
+export function roundsPlayed() {
+    rounds = rounds + 1;
 
-//     userRoundsPlayed.textContent = rounds;
+    userRoundsPlayed.textContent = rounds;
 
-//     if (rounds === 10) {
-//         userRoundsPlayed.textContent = rounds;
-//         alert('Click to see if your a Pokemon Master!');
-//         window.location = '../results/index.html';
-//     }
+    if (rounds === 10) {
+        userRoundsPlayed.textContent = rounds;
+        alert('Click to see if your a Pokemon Master!');
+    }
 
-//     return rounds;
+    return rounds;
     
-// }
+}

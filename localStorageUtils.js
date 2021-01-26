@@ -32,13 +32,13 @@ export function setPokeStats(newStats) {
 export function incrementViewed(_id) {
     const stats = getPokeStats();
 
-    const pokeId = findByUnderscoreId(stats, _id);
+    const pokeId = findByUnderscoreId(_id, stats);
 
     if (!pokeId) {
         
         const newStat = {
             _id: _id,
-            viewed: 1,
+            seen: 1,
             caught: 0
         };
         
@@ -46,7 +46,7 @@ export function incrementViewed(_id) {
     
     } else {
         
-        pokeId.viewed++;
+        pokeId.seen++;
     }
 
     setPokeStats(stats);
