@@ -42,7 +42,7 @@ var myChart = new Chart(ctx, { // eslint-disable-line
             {
                 label: '# of times seen',
                 data: makeSeenArray(pokeStats), // DATA ARRAY GOES HERE
-                backgroundColor: 'rgba(255, 99, 132)',
+                backgroundColor: 'yellow',
                 borderColor: 'black',
                 borderWidth: 2
             },
@@ -50,7 +50,7 @@ var myChart = new Chart(ctx, { // eslint-disable-line
                 label: '# of times caught',
                 data: makeCaughtArray(pokeStats), // DATA ARRAY GOES HERE
                 backgroundColor: 'black',
-                borderColor: 'rgba(255, 99, 132, 1)',
+                borderColor: 'yellow',
                 borderWidth: 2
             },
         ]
@@ -73,3 +73,7 @@ var myChart = new Chart(ctx, { // eslint-disable-line
         }
     }
 });
+
+
+myChart.canvas.parentNode.style.height = '500px';
+myChart.canvas.parentNode.style.width = '1000px';

@@ -7,7 +7,7 @@ body {
     background-image: url('../assets/gengar-giphy.gif');
     background-repeat: no-repeat;  
     background-position: 45% 49%;
-    background-size: 80% 118%;
+    background-size: 90% 118%;
 }
 
 main {
@@ -48,14 +48,14 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
-    color: crimson;
-    font-family: 'pokemon_solidnormal';
-    text-shadow: black 1;
+    color: rgb(255, 0, 51);
+    font-family: 'pokemon_hollownormal';
 }
 
 h3 {
     margin-top: 5rem;
     color: crimson;
+    font-family: 'pokemon_solidnormal';
 }
 
 
@@ -66,6 +66,12 @@ h2 {
 
 .pokebox{
     margin-top: 3rem;
+    -moz-border-radius-bottomright: 67px;
+    -webkit-border-bottom-right-radius: 67px;
+    border-bottom-right-radius: 67px;
+    -moz-border-radius-bottomleft: 67px;
+    -webkit-border-bottom-left-radius: 67px;
+    border-bottom-left-radius: 67px;
 }
 
 .pokemon-img {
@@ -98,5 +104,12 @@ h2 {
 
 }
 
+@font-face {
+    font-family: 'pokemon_hollownormal';
+    src: url('../assets/pokemon_hollow-webfont.woff2') format('woff2'),
+         url('../assets/pokemon_hollow-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
