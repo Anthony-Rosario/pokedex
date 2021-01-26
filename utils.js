@@ -64,7 +64,7 @@ export function renderPokeImg(pokemonItem) {
         if (pokeBalls < 10) {
             setThreePokemon();
         } else {
-            window.location = '../results/index.html';
+            window.location = './results/index.html';
         }
     });
 
