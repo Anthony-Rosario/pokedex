@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/results.css">
+    <title>Results</title>
+</head>
+<body>
+    <section class="main-section">
+        <div class = "results-container">
+            <div class = "pokemon-caught-results">
+                <label>
+                    Pokemon Caught
+                    <table id = "pokemon-caught-table">
+                        <th>
+                            <td>Pokemon</td>
+                            <td>Name</td>
+                            <td>Seen</td>
+                            <td>Caught</td>
+                        </th>
+                    </table>
+                </label>
+            </div>
+
+            <div class = "encountered-results">
+                <label>
+                    Seen but not caught Pokemon
+                    <table id = 'encountered-table'></table>
+                </label>
+            </div>
+            <button id = "reset-button">Reset Game?</button>
+        </div>
+
+    </section>
+        <script type="module" src="./results.js"></script>
+</body>
+</html>

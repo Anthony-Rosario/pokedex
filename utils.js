@@ -1,7 +1,9 @@
-import pokemon from 'data.js';
-import { incrementViewed, incrementCaught } from './localStorageUitls.js';
+import pokemon from './data.js';
+import { incrementViewed, incrementCaught } from './localStorageUtils.js';
 
-let pokeBalls = 5;
+
+const userRoundsPlayed = document.querySelector('rounds-played');
+let pokeBalls = 0;
 
 export function getRandomPokemon() {
     const randomIndex = Math.floor(Math.random() * pokemon.length);
@@ -9,16 +11,17 @@ export function getRandomPokemon() {
     return pokemon[randomIndex];
 }
 
-export function findByUnderscoreId(array, id) {
+export function findByUnderscoreId(_id, array) {
     for (let item of array) {
-        if (item._id === id) return item;
+        if (item._id === _id) return item;
     }
+    return null;
 }
 
 
 
 export function setThreePokemon() {
-    pokeBalls--;
+    pokeBalls++;
 
     let pokemonOne = getRandomPokemon();
     let pokemonTwo = getRandomPokemon();
@@ -30,9 +33,9 @@ export function setThreePokemon() {
         pokemonThree = getRandomPokemon();
     }
 
-    const img1 = renderPokeImg();
-    const img2 = renderPokeImg();
-    const img3 = renderPokeImg();
+    const img1 = renderPokeImg(pokemonOne);
+    const img2 = renderPokeImg(pokemonTwo);
+    const img3 = renderPokeImg(pokemonThree);
     
     incrementViewed(pokemonOne._id);
     incrementViewed(pokemonTwo._id);
@@ -52,13 +55,33 @@ export function renderPokeImg(pokemonItem) {
     image.src = pokemonItem.url_image;
 
     image.classList.add('pokemon-img');
+    
     image.addEventListener('click', () => {
         incrementCaught(pokemonItem._id);
 
-        if (pokeBalls > 5) {
+        if (pokeBalls < 10) {
             setThreePokemon();
         } else {
-            window.location = 'results';
+            window.location = '../results/index.html';
         }
     });
+
+    return image;
 }
+
+let rounds = 0;
+
+// export function roundsPlayed() {
+//     rounds = rounds + 1;
+
+//     userRoundsPlayed.textContent = rounds;
+
+//     if (rounds === 10) {
+//         userRoundsPlayed.textContent = rounds;
+//         alert('Click to see if your a Pokemon Master!');
+//         window.location = '../results/index.html';
+//     }
+
+//     return rounds;
+    
+// }
