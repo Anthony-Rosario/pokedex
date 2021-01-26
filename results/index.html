@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/results.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Results</title>
+</head>
+<body>
+    <section class="main-section">
+        <div class = "results-container">
+            <div class = "pokemon-caught-results">
+                <label>
+                    <h1>Pokemon Caught</h1>
+                    <table id="pokemon-caught-table" class="redTable">
+                        <tr>
+                            <td>Name</td>
+                            <td>Caught</td>
+                            <td>Seen</td>
+                        </tr>
+                    </table>
+                </label>
+            </div>
+            <button id="reset-button" class="resetBtn">Catch More?</button>
+            <canvas id="myChart"></canvas>
+
+            <div class = "encountered-results">
+                <label>
+                    <table id='encountered-table'></table>
+                </label>
+            </div>
+        </div>
+
+    </section>
+        <script type="module" src="./results.js"></script>
+</body>
+</html>

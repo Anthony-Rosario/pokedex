@@ -1,25 +1,13 @@
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-/* 
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
     --header-height: 80px;
-    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
-    --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: black;
+    background-image: url('../assets/gengar-giphy.gif');
+    background-repeat: no-repeat;  
+    background-position: 45% 49%;
+    background-size: 90% 118%;
 }
 
 main {
@@ -42,22 +30,32 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    height: 800px;
+
+}
+
+#pokemon {
+    display: block;
+    margin-bottom: 700px;
+    border: 1px solid black;
+    height: 100px;
+    background: rgb(136, 71, 71, 0.6);
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    color: rgb(255, 0, 51);
+    font-family: 'pokemon_hollownormal';
 }
 
-footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+h3 {
+    margin-top: 5rem;
+    color: crimson;
+    font-family: 'pokemon_solidnormal';
 }
 
 
@@ -66,54 +64,52 @@ h2 {
     font-weight: bold;
 }
 
-.gutter-right {
-    margin-right: 20px;
+.pokebox{
+    margin-top: 3rem;
+    -moz-border-radius-bottomright: 67px;
+    -webkit-border-bottom-right-radius: 67px;
+    border-bottom-right-radius: 67px;
+    -moz-border-radius-bottomleft: 67px;
+    -webkit-border-bottom-left-radius: 67px;
+    border-bottom-left-radius: 67px;
 }
 
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
+.pokemon-img {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    margin-top: -1px;
+    transition: .2s ease-in-out
 }
 
-header img {
-    height: var(--header-height);
+.pokemon-img:hover {
+    -moz-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    -webkit-box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #FF0000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #FF0000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
+@font-face {
+    font-family: 'pokemon_solidnormal';
+    src: url('../assets/pokemon_solid-webfont.woff2') format('woff2'),
+         url('../assets/pokemon_solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-
-content {
-    width: 80%;
 }
 
-p {
-    margin: var(--gutter);
+@font-face {
+    font-family: 'pokemon_hollownormal';
+    src: url('../assets/pokemon_hollow-webfont.woff2') format('woff2'),
+         url('../assets/pokemon_hollow-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }

@@ -1,0 +1,82 @@
+.pokemon-image {
+    width: 75px;
+    height: 75px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+label {
+    font-family: 'pokemon_solidnormal';
+    justify-content: center;
+    align-content: center;
+}
+
+
+h1 {
+    color:rgb(255, 255, 255);
+}
+
+table.redTable {
+    border: 5px solid #A40808;
+    background-color: #ffffff;
+    width: 400px;
+    text-align: center;
+    border-collapse: collapse;
+    color: rgb(43, 0, 100);
+  }
+
+
+  table.redTable td, table.redTable th {
+    border: 1px solid #424040;
+    padding: 3px 2px;
+  }
+
+
+  table.redTable tbody td {
+    font-size: 13px;
+  }
+
+
+ .resetBtn {
+    margin-left: 8rem;
+    font-family: 'pokemon_solidnormal';
+    color: rgb(230, 230, 230);
+    font-size: 14px;
+    padding: 12px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    -webkit-border-radius: 11.35135135135135px;
+    -moz-border-radius: 11.35135135135135px;
+    border-radius: 11.35135135135135px;
+    background: rgb(21, 0, 0);
+    background: -moz-linear-gradient(62deg, rgb(21, 0, 0) 37%, rgb(255, 18, 255) 100%);
+    background: -webkit-linear-gradient(62deg, rgb(21, 0, 0) 37%, rgb(255, 18, 255) 100%)   ;
+    background: -o-linear-gradient(62deg, rgb(21, 0, 0) 37%, rgb(255, 18, 255) 100%);
+    background: -ms-linear-gradient(62deg, rgb(21, 0, 0) 37%, rgb(255, 18, 255) 100%);
+    background: linear-gradient(332deg, rgb(21, 0, 0) 37%, rgb(255, 18, 255) 100%);
+    -webkit-box-shadow: 0px 1px 12px rgba(221, 0, 255, 0.77);
+    -moz-box-shadow:    0px 1px 12px rgba(221, 0, 255, 0.77);
+    box-shadow:         0px 1px 12px rgba(221, 0, 255, 0.77);
+}
+
+
+
+@font-face {
+    font-family: 'pokemon_solidnormal';
+    src: url('../assets/pokemon_solid-webfont.woff2') format('woff2'),
+         url('../assets/pokemon_solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'pokemon_hollownormal';
+    src: url('../assets/pokemon_hollow-webfont.woff2') format('woff2'),
+         url('../assets/pokemon_hollow-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
