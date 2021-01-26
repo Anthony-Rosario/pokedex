@@ -62,6 +62,14 @@ var myChart = new Chart(ctx, { // eslint-disable-line
                     beginAtZero: true
                 }
             }]
+        },
+        layout: {
+            padding: {
+                left: 30,
+                right: 30,
+                top: 30,
+                bottom: 30
+            }
         }
     }
 });
